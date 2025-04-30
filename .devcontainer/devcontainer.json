@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "Next.js",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			// Local Proxy
+			"ALL_PROXY": "${localEnv:ALL_PROXY}",
+			"all_proxy": "${localEnv:ALL_PROXY}",
+			"HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+			"HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+			"http_proxy": "${localEnv:HTTP_PROXY}",
+			"https_proxy": "${localEnv:HTTPS_PROXY}"
+		}
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				// Theme
+				"PKief.material-icon-theme",
+				// Git
+				"waderyan.gitblame",
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"codezombiech.gitignore",
+				// Base
+				"charliermarsh.ruff",
+				"davidanson.vscode-markdownlint",
+				"rangav.vscode-thunder-client",
+				"mikestead.dotenv",
+				"christian-kohler.path-intellisense",
+				"streetsidesoftware.code-spell-checker",
+				//React
+				"msjsdiag.vscode-react-native",
+				"bradlc.vscode-tailwindcss",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pnpm install"
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

@@ -2,22 +2,32 @@
   "name": "vscode-remote-try-next",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinnnyang/vscode-remote-try-next.git"
+  },
+  "engines": {
+    "node": "~20.18.2",
+    "pnpm": "~10.10.0"
+  },
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "react": "~19.1.0",
+    "react-dom": "~19.1.0",
+    "next": "~15.3.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "typescript": "~5.8.3",
+    "@types/node": "~20.17.30",
+    "@types/react": "~19.1.0",
+    "@types/react-dom": "~19.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "@eslint/eslintrc": "^3"
