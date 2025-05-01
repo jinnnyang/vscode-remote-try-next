@@ -38,10 +38,14 @@
 				"mikestead.dotenv",
 				"christian-kohler.path-intellisense",
 				"streetsidesoftware.code-spell-checker",
+				"RooVeterinaryInc.roo-cline",
+				"esbenp.prettier-vscode",
+				"PKief.material-icon-theme",
 				//React
 				"msjsdiag.vscode-react-native",
 				"bradlc.vscode-tailwindcss",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"quicktype.quicktype"
 			]
 		}
 	},
